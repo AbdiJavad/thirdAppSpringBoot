@@ -22,6 +22,16 @@ public class ProductController {
     @PostMapping
     public Product save (@RequestBody Product product){
         return productService.save(product);
+    }
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable int id){
+        productService.delete(id);
+
+    }
+    @PutMapping({"/{id}"})
+    public Product Update(@PathVariable int id,@RequestBody Product product){
+        return productService.Update(id,product);
 
     }
 

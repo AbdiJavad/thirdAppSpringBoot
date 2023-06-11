@@ -21,4 +21,23 @@ public class AddressService {
     public Address save(Address address) {
         return addressRepository.save(address);
     }
+    public void delete(int id){
+        addressRepository.deleteById(id);
+    }
+
+    public Address Update(int id,Address address){
+        Address addressData=addressRepository.findById(id).get();
+
+        if (address.getCountry()!=null)
+            addressData.setCountry(address.getCountry());
+        if (address.getCity()!=null)
+            addressData.setCity(address.getCity());
+         if (address.getBlock()> 0)
+          addressData.setBlock(address.getBlock());
+        if (address.getAlley()!=null)
+            addressData.setAlley(address.getAlley());
+         if (address.getUnit()>0)
+            addressData.setUnit(address.getUnit());
+        return addressRepository.save(addressData);
+    }
 }

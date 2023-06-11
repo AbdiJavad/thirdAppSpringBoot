@@ -22,4 +22,13 @@ public class AddressController {
     public Address save(@RequestBody Address address){
         return  addressService.save(address);
     }
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable int id){
+        addressService.delete(id);
+
+    }
+    @PutMapping("/{id}")
+    public Address Update(@PathVariable int id ,@RequestBody Address address){
+        return addressService.Update(id,address);
+    }
 }
