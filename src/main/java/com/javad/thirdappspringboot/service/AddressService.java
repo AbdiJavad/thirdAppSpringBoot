@@ -25,7 +25,7 @@ public class AddressService {
         addressRepository.deleteById(id);
     }
 
-    public Address Update(int id,Address address){
+    public Address update(int id,Address address){
         Address addressData=addressRepository.findById(id).get();
 
         if (address.getCountry()!=null)

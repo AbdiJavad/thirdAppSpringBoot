@@ -30,8 +30,7 @@ public class CustomerController {
         customerService.delete(id);
     }
     @PutMapping("/{id}")
-    public Customer Update(@PathVariable int id,@RequestBody Customer customer){
-        return customerService.Update(id,customer);
+    public Customer update(@PathVariable int id,@RequestBody Customer customer){
+        return customerService.update(id,customer);
     }
-
 }

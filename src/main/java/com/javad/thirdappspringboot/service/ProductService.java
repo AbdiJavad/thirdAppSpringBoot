@@ -29,7 +29,7 @@ public class ProductService {
         productRepository.deleteById(id);
     }
 
-    public Product Update(int id,Product product){
+    public Product update(int id,Product product){
         Product productData = productRepository.findById(id).get();
 
         if(product.getName()!=null)

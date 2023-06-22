@@ -30,8 +30,8 @@ public class ProductController {
 
     }
     @PutMapping({"/{id}"})
-    public Product Update(@PathVariable int id,@RequestBody Product product){
-        return productService.Update(id,product);
+    public Product update(@PathVariable int id,@RequestBody Product product){
+        return productService.update(id,product);
 
     }
 

@@ -28,7 +28,7 @@ public class AddressController {
 
     }
     @PutMapping("/{id}")
-    public Address Update(@PathVariable int id ,@RequestBody Address address){
-        return addressService.Update(id,address);
+    public Address update(@PathVariable int id ,@RequestBody Address address){
+        return addressService.update(id,address);
     }
 }

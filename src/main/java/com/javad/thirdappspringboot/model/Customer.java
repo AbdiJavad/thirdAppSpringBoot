@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 @Data
 @Entity
-@Table(name = "Custo")
+@Table(name = "custo")
 public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO )

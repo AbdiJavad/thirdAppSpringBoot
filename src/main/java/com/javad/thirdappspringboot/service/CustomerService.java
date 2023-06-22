@@ -24,7 +24,7 @@ public class CustomerService {
         customerRepository.deleteById(id);
     }
 
-    public Customer Update(int id,Customer customer){
+    public Customer update(int id,Customer customer){
         Customer customerData=customerRepository.findById(id).get();
 
         if (customer.getFirstname()!=null)
