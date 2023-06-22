@@ -15,4 +15,6 @@ public class Address {
     private String alley;
     private int block;
     private int unit;
+    @OneToOne(mappedBy ="address")
+    private Customer customer;
 }

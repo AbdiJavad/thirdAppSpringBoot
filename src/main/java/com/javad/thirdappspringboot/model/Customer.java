@@ -15,5 +15,8 @@ public class Customer {
     private String lastname;
     private int age;
     private long phone;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "address_id")
+    private Address address;
 
 }
